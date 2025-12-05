@@ -15,11 +15,13 @@ This project automates deployment using: Terraform → Creates EC2 instance, Sec
 
 ###  File Structure
 terraform/
-├─ main.tf  
-├─ output.tf  
-├─ provider.tf  
-├─ userdata.sh 
-└─ variable.tf 
+- main.tf
+- variables.tf
+- provider.tf
+- outputs.tf
+- user_data.sh
+
+
 
 ###  main.tf
 Defines EC2 instance and Security Group using variables.
