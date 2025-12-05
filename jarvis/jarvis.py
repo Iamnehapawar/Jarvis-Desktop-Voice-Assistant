@@ -26,6 +26,8 @@ def time() -> None:
     speak("The current time is")
     speak(current_time)
     print("The current time is", current_time)
+    print("Hello from Neha")
+
 
 
 def date() -> None:

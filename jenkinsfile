@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         REMOTE_USER = "ubuntu"
-        REMOTE_HOST = "3.88.156.131"
+        REMOTE_HOST = "13.235.243.118"
         REMOTE_DIR  = "/home/ubuntu/jarvis"
         SSH_OPTS    = "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
         CRED_ID     = "jarvis-key"
@@ -15,7 +15,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Iamnehapawar/Terraform-Jenkins-Jarvis-Desktop-Voice-Assistant.git'
+                    url: 'https://github.com/Iamnehapawar/Jarvis-Desktop-Voice-Assistant.git'
             }
         }
 

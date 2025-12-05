@@ -3,7 +3,7 @@ provider "aws" {
 }
 /*
 resource "aws_key_pair" "jenkins" {
-  key_name   = "jenkins1"
+  key_name   = "jenkins"
   public_key = file("~/.ssh/id_rsa.pub")
 }*/
 
@@ -72,10 +72,10 @@ resource "aws_security_group" "jarvis-2-0" {
 }
 
 resource "aws_instance" "jarvis-2-0" {
-  ami                    = "ami-0ecb62995f68bb549"  # Updated Ubuntu AMI
+  ami                    = "ami-0d176f79571d18a8f"  # Updated Ubuntu AMI
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.jarvis-2-0.id]
-  key_name               =  "terraformkey"  # Ensure this key pair exists in your AWS account
+  key_name               =  "jarviskey"  # Ensure this key pair exists in your AWS account
 
   user_data = file("${path.module}/user_data.sh")
 
